@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Dino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="board" id="board">
+        <div class="floor" id="floor">
+             <img src="imagenes/dinosaurio_chrome/img/suelo.png" alt="">
+            
+             <div class="scoreContent" id="scoreContent">
+                Score: <span id="score" class="score">0</span>
+             </div> 
+        </div>
+
+        <div class="floor" id="floor" style="left: 100%;">
+            <img src="imagenes/dinosaurio_chrome/img/suelo.png" alt="">
+        </div>
+
+        <div class="dino" id="dino">
+            <img src="imagenes/dinosaurio_chrome/img/pngwing.com.png" alt="dino">
+        </div>
+
+        <div id="cactus"  class="cactus">
+            <img src="imagenes/dinosaurio_chrome/img/cactus1.png" alt="">
+        </div>
+    </div>
+    <div class="menu">
+        <button id="buttonPlayStop" class= "button" class= "play"></button>
+        <button id="restart" >Restart Game</button>
+    </div>
+    <div id="gameOver" class="gameOver"></div>
+
+    <script src="jvscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;          /*Para que no nos queden bordes blancos en el navegador*/
+}  
+.board{
+    background-color: aqua;
+    width: 100%;  /*Para que ocupe toda la pantalla a nivel horizontal*/
+    height: 400px; 
+    position: relative; /*Nos atrapa el position absolute*/
+}
+.dino{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 10px; /*Se posisiona 10px mas arriba del board, con ayuda del position relative y absolute*/
+    left: 50px; /*Para que aparezca 30px tomando de referencia la izquierda de la pantalla*/
+}
+
+.dino img{ /*Aqui utilizamos la imagen del dino y hacemos que ocupe el 100% del div*/
+    width: 100%;
+    height: 100%;
+}
+
+.dinoJump{
+    animation: dinoJump 0.5s linear; /*Animación de salto*/
+
+}
+
+.floor{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.floor img{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    animation: floorMove 5s linear infinite; /*Animacion del suelo y posiciones*/
+}
+
+.cactus{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    bottom: 10px;
+    right: 0;
+    animation: cactusAnimation 3s linear infinite; /*Animacion del cactus y posiciones*/
+}
+
+.cactus img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+@keyframes cactusAnimation {
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+    
+}
+@keyframes dinoJump {
+    0%{
+       bottom: 10px;                 /*Configuracion de los patrones de movimiento de las animaciones*/
+    }                    
+    45%, 65%{
+        bottom: 170px;
+    }
+    
+}
+
+@keyframes floorMove {
+    0%{
+       right: 0%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.scoreContent{
+    font-size: 60px;
+    text-align-last: center;  /* Estilos para el contador score*/
+    margin-top: 20px;
+}
+
+.button.play{
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+
+.button{
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-color: transparent transparent transparent black; /*Estilos para el boton play y stop*/
+    transition: 1000ms all ease;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+}
+
+.button:hover{
+    border-color: transparent transparent transparent black; /*Hover para el boton*/
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
